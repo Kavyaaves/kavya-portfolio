@@ -1,14 +1,21 @@
 import React from 'react'
-
+import { motion, useMotionValue, useTransform } from "framer-motion"
 const Screen1 = () => {
-
+    const variants = {
+        show: { opacity: 1 },
+        hidden: { opacity: 0 },
+    }
+    const y = useMotionValue(0)
+    const cy = useTransform(y, value => value / 2)
     return (
         <div className="h-screen relative overflow-hidden">
-            <h1 className="px-6 text-5xl py-6 font-elite">{'<'} Kavya Murali {'/>'}</h1>
+            <motion.h1
+                style={{ y: cy }}
+                className="px-6 text-5xl py-6 font-elite ">{'<'} Kavya Murali {'/>'}</motion.h1>
             <br />
             <div className='max-w-5xl flex font-recursive items-center h-auto lg:h-auto flex-wrap mx-auto lg:my-0'>
                 <div className='lg:w-3/5 p-5'>
-                    <h3 className='text-3xl  '>Hey there! I am a</h3>
+                    <h3 className='text-3xl'>Hey there! I am a</h3>
                     <h1 className="text-5xl font-dancing">Full Stack Developer</h1>
                     <h1 className="text-5xl pb-12"> Freelancer</h1>
                     <div className="py-6">
@@ -54,8 +61,8 @@ const Screen1 = () => {
                 </div>
             </div >
 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#bae6fd" fillOpacity="1" d="M0,64L80,96C160,128,320,192,480,197.3C640,203,800,149,960,128C1120,107,1280,117,1360,122.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+            {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#bae6fd" fillOpacity="1" d="M0,64L80,96C160,128,320,192,480,197.3C640,203,800,149,960,128C1120,107,1280,117,1360,122.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> */}
         </div >
     )
 }

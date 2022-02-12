@@ -4,19 +4,21 @@ module.exports = {
         './pages/**/*.{js,ts,jsx,tsx}',
         './components/**/*.{js,ts,jsx,tsx}',
     ],
-    darkMode: false, // or 'media' or 'class'
+
     theme: {
+        colors: {
+            light: "#bae6fd",
+            medium: "#0891b2",
+            dark: "#0c4a6e",
+        },
         extend: {
             colors: {
-                "light": "#bae6fd",
-                "medium": "#0891b2",
-                "dark": "#0c4a6e",
+                light: "#bae6fd",
+                medium: "#0891b2",
+                dark: "#0c4a6e",
             },
-            backgroundColor: {
-                "light": "#bae6fd",
-                "medium": "#0891b2",
-                "dark": "#0c4a6e",
-            },
+            backgroundColor: (theme) => theme('colors'),
+            textColor: (theme) => theme('colors'),
         },
         fontFamily: {
             'sans': ['ui-sans-serif', 'system-ui'],

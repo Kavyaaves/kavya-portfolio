@@ -2,7 +2,22 @@
 	margin: 0;
 	padding: 0;
 }
+html {
+	scroll-behavior: smooth;
+}
 
+.text-dark {
+	color: #0c4a6e;
+}
+.text-light {
+	color: #bae6fd;
+}
+.bg-dark {
+	background-color: #0c4a6e;
+}
+.bg-light {
+	background-color: #bae6fd;
+}
 .webgl {
 	position: fixed;
 	top: 0;
@@ -17,3 +32,4 @@
 .font-elite {
 	font-family: 'Special Elite', cursive;
 }
+

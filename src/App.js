@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import * as THREE from "three";
 import gsap from "gsap";
-import Screen1 from "./components/Screen1";
-import Screen2 from "./components/Screen2";
-import Screen3 from "./components/Screen3";
+import { motion } from "framer-motion"
 import "./App.css"
+import AllScreens from "./components/AllScreens";
 class App extends Component {
   componentDidMount() {
     /**
@@ -198,17 +197,12 @@ class App extends Component {
     tick()
   }
   render() {
-    return <div>
+    return <motion.div>
       <canvas class="webgl">
       </canvas>
-      <Screen1 />
-      <section class="section">
-        <Screen2 />
-      </section>
-      <section class="section">
-        <Screen3 />
-      </section>
-    </div >;
+      <AllScreens />
+
+    </motion.div >
   }
 }
 export default App;

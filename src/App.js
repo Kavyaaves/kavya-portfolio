@@ -1,5 +1,9 @@
 import React, { Component } from "react";
-import * as THREE from "three";
+import {
+  Scene, PerspectiveCamera, MeshToonMaterial, Group,
+  WebGLRenderer, Clock, BufferGeometry, BufferAttribute, PointsMaterial,
+  Points, DirectionalLight
+} from "three";
 import gsap from "gsap";
 import { motion } from "framer-motion"
 import "./App.css"
@@ -13,7 +17,7 @@ class App extends Component {
     const canvas = document.querySelector('canvas.webgl')
 
     // Scene
-    const scene = new THREE.Scene()
+    const scene = new Scene()
 
     /**
      * Objects
@@ -21,7 +25,7 @@ class App extends Component {
     const objectsDistance = 4
 
     // Material
-    const material = new THREE.MeshToonMaterial({ color: '#ffeded' })
+    const material = new MeshToonMaterial({ color: '#ffeded' })
 
     // Meshes
     // const mesh1 = new THREE.Mesh(
@@ -62,25 +66,25 @@ class App extends Component {
       positions[i * 3 + 2] = (Math.random() - 0.5) * 10
     }
 
-    const particlesGeometry = new THREE.BufferGeometry()
-    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
+    const particlesGeometry = new BufferGeometry()
+    particlesGeometry.setAttribute('position', new BufferAttribute(positions, 3))
 
     // Material
 
-    const particlesMaterial = new THREE.PointsMaterial({
+    const particlesMaterial = new PointsMaterial({
       color: '#cffafe',
       sizeAttenuation: true,
       size: 0.03
     })
 
     // Points
-    const particles = new THREE.Points(particlesGeometry, particlesMaterial)
+    const particles = new Points(particlesGeometry, particlesMaterial)
     scene.add(particles)
 
     /**
      * Lights
      */
-    const directionalLight = new THREE.DirectionalLight('#ffffff', 2)
+    const directionalLight = new DirectionalLight('#ffffff', 2)
     directionalLight.position.set(1, 1, 0)
     scene.add(directionalLight)
 
@@ -147,18 +151,18 @@ class App extends Component {
      * Camera
      */
     // Group
-    const cameraGroup = new THREE.Group()
+    const cameraGroup = new Group()
     scene.add(cameraGroup)
 
     // Base camera
-    const camera = new THREE.PerspectiveCamera(35, sizes.width / sizes.height, 0.1, 100)
+    const camera = new PerspectiveCamera(35, sizes.width / sizes.height, 0.1, 100)
     camera.position.z = 6
     cameraGroup.add(camera)
 
     /**
      * Renderer
      */
-    const renderer = new THREE.WebGLRenderer({
+    const renderer = new WebGLRenderer({
       canvas: canvas,
       alpha: true
     })
@@ -168,7 +172,7 @@ class App extends Component {
     /**
      * Animate
      */
-    const clock = new THREE.Clock()
+    const clock = new Clock()
     let previousTime = 0
 
     const tick = () => {

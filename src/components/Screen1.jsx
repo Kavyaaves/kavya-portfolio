@@ -1,16 +1,38 @@
 import React from 'react'
 import { motion, useMotionValue, useTransform } from "framer-motion"
 const Screen1 = () => {
-    const variants = {
-        show: { opacity: 1 },
-        hidden: { opacity: 0 },
+    const [angle, setAngle] = React.useState(0)
+    const [perspective, setPerspective] = React.useState(500)
+
+    // we replace the useState with two motion values. One for each axis.
+    // Since we want the card to start out flat we set the initial
+    // values to x=0.5 y=0.5 which equals to no transformation
+    const y = useMotionValue(0.5)
+    const x = useMotionValue(0.5)
+
+    const rotateY = useTransform(x, [0, 1], [-angle, angle], {
+        clamp: true,
+    })
+    const rotateX = useTransform(y, [0, 1], [angle, -angle], {
+        clamp: true,
+    })
+
+    const onMove = e => {
+        // get position information for the card
+        const bounds = e.currentTarget.getBoundingClientRect()
+
+        // set x,y local coordinates
+        const xValue = (e.clientX - bounds.x) / e.currentTarget.clientWidth
+        const yValue = (e.clientY - bounds.y) / e.currentTarget.clientHeight
+
+        // update MotionValues
+        x.set(xValue, true)
+        y.set(yValue, true)
     }
-    const y = useMotionValue(0)
-    const cy = useTransform(y, value => value / 2)
     return (
         <div className="h-screen relative overflow-hidden">
             <motion.h1
-                style={{ y: cy }}
+
                 className="px-6 text-5xl py-6 font-elite ">{'<'} Kavya Murali {'/>'}</motion.h1>
             <br />
             <div className='max-w-5xl flex font-recursive items-center h-auto lg:h-auto flex-wrap mx-auto lg:my-0'>
@@ -47,22 +69,37 @@ const Screen1 = () => {
                         </div>
                     </div>
                 </div>
-                <div className='lg:w-2/5 -mt-20'>
-                    <img
-                        src='images/kavy1.jpg'
-                        alt="Kavya Murali"
-                        // layout='fixed'
-                        width={350}
-                        height={300}
-                        // objectFit="contain"
-                        // objectPosition="center"
-                        className='rounded-none lg:rounded-lg shadow-2xl hidden lg:block overflow-hidden'
-                    />
-                </div>
+                <motion.div className='lg:w-2/5 flex items-center justify-center h-400'
+                    style={{
+                        perspective: 500,
+                        height: "400px"
+                    }}
+                >
+                    <motion.div onPointerMove={onMove}
+                        onHoverStart={() => setAngle(5)}
+                        onHoverEnd={() => setAngle(0)}
+                        style={{
+                            rotateY,
+                            rotateX,
+                        }}>
+
+                        <motion.img
+
+                            src='images/kavy1.jpg'
+                            alt="Kavya Murali"
+                            // layout='fixed'
+
+                            width={350}
+                            height={300}
+
+                            className='rounded-none lg:rounded-lg shadow-2xl hidden lg:block overflow-hidden'
+                        />
+                    </motion.div>
+                </motion.div>
             </div >
 
-            {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#bae6fd" fillOpacity="1" d="M0,64L80,96C160,128,320,192,480,197.3C640,203,800,149,960,128C1120,107,1280,117,1360,122.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> */}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#bae6fd" fillOpacity="1" d="M0,64L80,96C160,128,320,192,480,197.3C640,203,800,149,960,128C1120,107,1280,117,1360,122.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
         </div >
     )
 }

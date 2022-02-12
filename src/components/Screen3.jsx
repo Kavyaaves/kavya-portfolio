@@ -60,7 +60,7 @@ const Screen3 = () => {
                             <h5 className="text-gray-700 text-sm">Track COVID-19 status globally and nationally. Choose your country and find out the status of infected, recovered and death information. Compare the data using graph for better understanding.</h5>
                             <br />
                             <div className="flex bg-medium flex-wrap gap-x-4 items-center justify-center">
-                                <img src="/tools/create-react-app.svg" className="w-8 h-10" alt="ReactJS" />
+                                <img src="/tools/react.svg" className="w-8 h-10" alt="ReactJS" />
                                 <img src="/tools/material-ui.svg" className="w-15 h-6" alt="Material UI" />
                                 <img src="https://www.chartjs.org/docs/latest/favicon.ico" className="w-10 h-10" alt="Chart JS" />
                                 <img src="/tools/axios.svg" className="w-20 h-10" alt="Axios" />
@@ -81,7 +81,7 @@ const Screen3 = () => {
                             <br />
 
                             <div className="flex bg-medium flex-wrap gap-x-4 items-center justify-center">
-                                <img src="/tools/create-react-app.svg" className="w-8 h-10" alt="ReactJS" />
+                                <img src="/tools/react.svg" className="w-8 h-10" alt="ReactJS" />
                                 <img src="/tools/framer.svg" className="w-32 h-10" alt="Framer" />
                                 <img src="/tools/npm.svg" className="w-10 h-8" alt="npm" />
                             </div>
@@ -100,7 +100,7 @@ const Screen3 = () => {
                             <br />
 
                             <div className="flex bg-medium flex-wrap gap-x-4 items-center justify-center">
-                                <img src="/tools/create-react-app.svg" className="w-8 h-10" alt="ReactJS" />
+                                <img src="/tools/react.svg" className="w-8 h-10" alt="ReactJS" />
                                 <img src="/tools/redux.svg" className="w-20 h-8" alt="Redux" />
                                 <img src="/tools/yarn.svg" className="w-10 h-8" alt="Yarn" />
                             </div>
@@ -121,7 +121,7 @@ const Screen3 = () => {
 
                             <div className="flex bg-medium flex-wrap gap-x-4 items-center justify-center">
 
-                                <img src="/tools/create-react-app.svg" className="w-10 h-10" alt="ReactJS" />
+                                <img src="/tools/react.svg" className="w-10 h-10" alt="ReactJS" />
                                 <img src="/tools/font-awesome.svg" className="w-20 h-8" alt="Font Awesome" />
                                 <img src="/tools/yarn.svg" className="w-10 h-8" alt="Yarn" />
                             </div>

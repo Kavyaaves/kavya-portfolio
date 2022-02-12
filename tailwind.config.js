@@ -18,22 +18,28 @@ module.exports = {
                 "dark": "#0c4a6e",
             },
         },
+        fontFamily: {
+            'sans': ['ui-sans-serif', 'system-ui'],
+            'serif': ['ui-serif', 'Georgia'],
+            'mono': ['ui-monospace', 'SFMono-Regular'],
+            'display': ['Oswald'],
+            'body': ['"Open Sans"'],
+            'dancing': ['Dancing Script'],
+            'elite': ['Special Elite'],
+            'recursive': [
+                'Recursive',
+                'ui-monospace',
+                'SFMono-Regular',
+                'ui-serif',
+                'Georgia',
+            ],
+            // mono: ['ui-monospace', 'SFMono-Regular', 'ui-sans-serif', 'system-ui'],
+        },
     },
     darkMode: false,
     variants: {
         extend: {},
     },
-    fontFamily: {
-        'dancing': ['Dancing Script'],
-        'elite': ['Special Elite'],
-        'recursive': [
-            'Recursive',
-            'ui-monospace',
-            'SFMono-Regular',
-            'ui-serif',
-            'Georgia',
-        ],
-        // mono: ['ui-monospace', 'SFMono-Regular', 'ui-sans-serif', 'system-ui'],
-    },
+
     plugins: [],
 };

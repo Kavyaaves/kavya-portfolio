@@ -55,7 +55,7 @@ class App extends Component {
      */
     // Geometry
     const particlesCount = 1000
-    const positions = new Float32Array(particlesCount * 4)
+    const positions = new Float32Array(particlesCount * 5)
 
     for (let i = 0; i < particlesCount; i++) {
       positions[i * 3 + 0] = (Math.random() - 0.5) * 10
@@ -200,7 +200,6 @@ class App extends Component {
   render() {
     return <div>
       <canvas class="webgl">
-
       </canvas>
       <Screen1 />
       <section class="section">
@@ -209,7 +208,6 @@ class App extends Component {
       <section class="section">
         <Screen3 />
       </section>
-
     </div >;
   }
 }

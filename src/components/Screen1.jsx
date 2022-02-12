@@ -1,11 +1,12 @@
 import React from 'react'
 
 const Screen1 = () => {
+
     return (
         <div className="h-screen relative overflow-hidden">
-            <h1 className="font-elite px-6 text-5xl py-6">{'<'} Kavya Murali {'>'}</h1>
+            <h1 className="px-6 text-5xl py-6 font-elite">{'<'} Kavya Murali {'/>'}</h1>
             <br />
-            <div className='max-w-5xl flex items-center h-auto lg:h-auto flex-wrap mx-auto lg:my-0'>
+            <div className='max-w-5xl flex font-recursive items-center h-auto lg:h-auto flex-wrap mx-auto lg:my-0'>
                 <div className='lg:w-3/5 p-5'>
                     <h3 className='text-3xl  '>Hey there! I am a</h3>
                     <h1 className="text-5xl font-dancing">Full Stack Developer</h1>

@@ -14,7 +14,7 @@ const Screen3 = () => {
         ),
     };
     return (
-        <div className="md:h-screen relative scroller-div">
+        <div className="md:h-screen relative ">
             <div className='max-w-6xl h-100  items-center h-auto lg:h-auto flex-wrap mx-auto lg:my-0'>
                 <div className="flex py-5 items-center text-center justify-center mx-auto gap-4">
                     {/* <img src='/kavy1idth="100" height="100" /> */}

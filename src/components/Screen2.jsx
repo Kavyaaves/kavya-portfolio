@@ -2,7 +2,7 @@ import React from 'react'
 
 const Screen2 = () => {
     return (
-        <div className="md:h-screen relative scroller-div border-custom">
+        <div className="md:h-screen relative border-custom">
             <div className="">
                 <div className='max-w-5xl h-100 flex items-center h-auto lg:h-auto flex-wrap mx-auto lg:my-0 pb-4'>
                     <div className="flex pt-4 items-center text-center justify-center mx-auto gap-4">

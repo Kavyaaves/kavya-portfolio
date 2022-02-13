@@ -12,13 +12,11 @@ module.exports = {
             dark: "#0c4a6e",
         },
         extend: {
-            colors: {
-                light: "#bae6fd",
-                medium: "#0891b2",
-                dark: "#0c4a6e",
-            },
             backgroundColor: (theme) => theme('colors'),
             textColor: (theme) => theme('colors'),
+            backgroundImage: (theme) => ({
+                kavya: "url('/images/kavy1.jpg')",
+            }),
         },
         fontFamily: {
             'sans': ['ui-sans-serif', 'system-ui'],

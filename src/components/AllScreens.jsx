@@ -6,7 +6,6 @@ import HomeSvg from "../svg/home"
 import WorkSvg from "../svg/work"
 import ProjectSvg from "../svg/project"
 import ContactSvg from "../svg/contactme"
-
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion"
 const AllScreens = () => {
     const [hover, setHover] = React.useState("")
@@ -31,7 +30,7 @@ const AllScreens = () => {
             <div ref={sec3}>
                 <Screen3 />
             </div>
-            <motion.div animate className="sticky bg-dark backdrop-opacity-10 cursor-pointer max-w-md flex gap-5 items-center justify-center bottom-5 p-3  m-auto  border-2 border-blue-300 rounded-full bg-opacity-60 backdrop-filter backdrop-blur-sm">
+            <motion.div animate className="sticky bg-dark backdrop-opacity-10 cursor-pointer max-w-md flex gap-5 items-center justify-center bottom-5 md:p-3 p-1 m-auto  border-2 border-blue-300 rounded-full bg-opacity-60 backdrop-filter backdrop-blur-sm">
                 <AnimateSharedLayout>
                     <motion.div onClick={() => scrollTo(sec1)} whileHover="hover" className={hover == "home" ? "flex text-center items-center rounded-full p-2 px-3 bg-blue-200" : "flex p-2 text-center items-center"} onHoverStart={e => setHover("home")} onHoverEnd={e => setHover("")}>
                         <motion.div className="items-center justify-center"

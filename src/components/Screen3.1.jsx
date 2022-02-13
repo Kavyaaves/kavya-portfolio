@@ -6,8 +6,8 @@ const Screen3 = () => {
         dots: true,
         infinite: false,
         speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         appendDots: (dots) => (
             <div style={{}}>
                 <ul style={{ margin: '0px', color: 'white' }}> {dots} </ul>
@@ -32,7 +32,7 @@ const Screen3 = () => {
                 <br />
                 <Slider {...settings} className='max-w-5xl flex gap-5 m-auto'>
 
-                    <div className="max-w-lg m-auto bg-blue-200 float-center rounded-lg  shadow-md">
+                    <div className="max-w-md bg-blue-200 float-center rounded-lg  shadow-md">
                         <motion.img
                             src='images/babu-1.png'
                             width="100%"
@@ -43,6 +43,7 @@ const Screen3 = () => {
                             <h5 className="mb-2 text-xl font-bold tracking-tight text-blue-900 ">Portfolio with Algal Database</h5>
                             <h5 className="text-gray-700 text-sm">Freelance Project for Dr. Bakthavachalam Babu, Assistant Professor, Madras Christian College. Includes Algal Database for reference.</h5>
                             <br />
+
                             <div className="flex bg-medium flex-wrap gap-x-4 items-center justify-center">
                                 <img src="/tools/nextjs.svg" className="w-16 h-10" alt="NextJS" />
                                 <img src="/tools/tailwindcss.svg" className="w-32 h-10" alt="Tailwind CSS" />

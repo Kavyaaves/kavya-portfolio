@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion, useMotionValue, useTransform } from "framer-motion"
 const Screen1 = () => {
-    const [angle, setAngle] = React.useState(0)
+    const [angle, setAngle] = React.useState(8)
     const [perspective, setPerspective] = React.useState(500)
 
     // we replace the useState with two motion values. One for each axis.
@@ -29,6 +29,10 @@ const Screen1 = () => {
         x.set(xValue, true)
         y.set(yValue, true)
     }
+    const onLeave = e => {
+        x.set(0.5, true)
+        y.set(0.5, true)
+    }
     return (
         <div className="h-screen relative overflow-hidden">
             <motion.h1
@@ -36,6 +40,14 @@ const Screen1 = () => {
                 className="px-6 text-5xl py-6 font-elite ">{'<'} Kavya Murali {'/>'}</motion.h1>
             <br />
             <div className='max-w-5xl flex font-recursive items-center h-auto lg:h-auto flex-wrap mx-auto lg:my-0'>
+                <div className='block  lg:hidden rounded-full shadow-xl mx-auto  h-48 w-48'>
+                    <motion.img
+
+                        src='images/kavy1.jpg'
+                        alt="Kavya Murali"
+                        className='rounded-full  shadow-2xl  block overflow-hidden'
+                    />
+                </div>
                 <div className='lg:w-3/5 p-5'>
                     <h3 className='text-3xl'>Hey there! I am a</h3>
                     <h1 className="text-5xl font-dancing">Full Stack Developer</h1>
@@ -75,9 +87,8 @@ const Screen1 = () => {
                         height: "400px"
                     }}
                 >
-                    <motion.div onPointerMove={onMove}
-                        onHoverStart={() => setAngle(5)}
-                        onHoverEnd={() => setAngle(0)}
+                    <motion.div onMouseMove={onMove}
+                        onMouseLeave={onLeave}
                         style={{
                             rotateY,
                             rotateX,

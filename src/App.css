@@ -1,11 +1,10 @@
 * {
 	margin: 0;
-	padding: 0;
 }
 html {
 	scroll-behavior: smooth;
+	background-color: #0c4a6e;
 }
-
 
 .text-dark {
 	color: #0c4a6e;
@@ -33,4 +32,3 @@ html {
 .font-elite {
 	font-family: 'Special Elite', cursive;
 }
-

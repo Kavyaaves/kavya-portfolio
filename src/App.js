@@ -6,8 +6,8 @@ import {
 } from "three";
 import gsap from "gsap";
 import { motion } from "framer-motion"
-import "./App.css"
 import AllScreens from "./components/AllScreens";
+import "./App.css"
 class App extends Component {
   componentDidMount() {
     /**
@@ -57,7 +57,7 @@ class App extends Component {
      * Particles
      */
     // Geometry
-    const particlesCount = 1000
+    const particlesCount = 500
     const positions = new Float32Array(particlesCount * 5)
 
     for (let i = 0; i < particlesCount; i++) {
@@ -74,7 +74,7 @@ class App extends Component {
     const particlesMaterial = new PointsMaterial({
       color: '#cffafe',
       sizeAttenuation: true,
-      size: 0.03
+      size: 0.05
     })
 
     // Points

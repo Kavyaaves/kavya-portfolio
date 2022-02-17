@@ -1,13 +1,30 @@
+import { motion } from 'framer-motion'
 import React from 'react'
+import AllScreens from './AllScreens'
 
 const Screen2 = () => {
+    const transition = {
+        duration: 0.3,
+        ease: [0.43, 0.13, 0.23, 0.96]
+    };
+    const imageVariants = {
+        exit: { x: 100, opacity: 0, transition },
+        enter: { x: 0, opacity: 1, transition: { delay: 0.1, ...transition } }
+    };
     return (
-        <div className="md:h-screen relative border-custom">
+        <motion.div className="md:h-screen relative border-custom" initial={{ x: 100, opacity: 0, transition }}
+            animate={{ x: 0, opacity: 1, transition: { delay: 0.5, ...transition } }}
+            exit={{ opacity: 0, transition }}
+            transition={{
+
+                duration: 0.7,
+                ease: "easeIn"
+            }}>
             <div className="">
                 <div className='max-w-5xl h-100 flex items-center h-auto lg:h-auto flex-wrap mx-auto lg:my-0 pb-4'>
                     <div className="flex pt-4 items-center text-center justify-center mx-auto gap-4">
                         <img src="/images/work.svg" width="50" height="50" />
-                        <h1 className="text-light  md:text-md text-3xl">Work Experience</h1>
+                        <h1 className="text-light  md:text-md text-3xl" variants={imageVariants}>Work Experience</h1>
                     </div>
                     <ol className="relative px-10 pb-0 pt-10 overflow-hidden">
                         <div
@@ -60,7 +77,8 @@ const Screen2 = () => {
                     </ol>
                 </div>
             </div>
-        </div >
+            <AllScreens />
+        </motion.div >
     )
 }
 

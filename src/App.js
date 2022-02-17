@@ -5,9 +5,17 @@ import {
   Points, DirectionalLight
 } from "three";
 import gsap from "gsap";
+import { AnimatePresence } from "framer-motion";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { motion } from "framer-motion"
 import AllScreens from "./components/AllScreens";
+import Screen1 from "./components/Screen1"
+import Screen2 from "./components/Screen2"
+import Screen3 from "./components/Screen3"
+import Screen4 from "./components/Screen4"
+
 import "./App.css"
+import MainRouter from "./components/MainRouter";
 class App extends Component {
   componentDidMount() {
     /**
@@ -23,41 +31,7 @@ class App extends Component {
      * Objects
      */
     const objectsDistance = 4
-
-    // Material
-    const material = new MeshToonMaterial({ color: '#ffeded' })
-
-    // Meshes
-    // const mesh1 = new THREE.Mesh(
-    //   new THREE.TorusGeometry(1, 0.4, 16, 60),
-    //   material
-    // )
-    // const mesh2 = new THREE.Mesh(
-    //   new THREE.ConeGeometry(1, 2, 32),
-    //   material
-    // )
-    // const mesh3 = new THREE.Mesh(
-    //   new THREE.TorusKnotGeometry(0.8, 0.35, 100, 16),
-    //   material
-    // )
-
-    // mesh1.position.y = - objectsDistance * 0
-    // mesh2.position.y = - objectsDistance * 1
-    // mesh3.position.y = - objectsDistance * 2
-
-    // mesh1.position.x = 2
-    // mesh2.position.x = - 2
-    // mesh3.position.x = 2
-
-    // const sectionMeshes = [mesh1, mesh2, mesh3]
-
-    // scene.add(mesh1, mesh2, mesh3)
-
-    /**
-     * Particles
-     */
-    // Geometry
-    const particlesCount = 500
+    const particlesCount = 1200
     const positions = new Float32Array(particlesCount * 5)
 
     for (let i = 0; i < particlesCount; i++) {
@@ -74,7 +48,7 @@ class App extends Component {
     const particlesMaterial = new PointsMaterial({
       color: '#cffafe',
       sizeAttenuation: true,
-      size: 0.05
+      size: 0.04
     })
 
     // Points
@@ -204,7 +178,8 @@ class App extends Component {
     return <motion.div>
       <canvas class="webgl">
       </canvas>
-      <AllScreens />
+      <MainRouter />
+      {/* <AllScreens /> */}
 
     </motion.div >
   }

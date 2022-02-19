@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion, useMotionValue, useTransform } from "framer-motion"
-import AllScreens from './AllScreens'
 const Screen1 = () => {
     const [angle, setAngle] = React.useState(8)
     const [perspective, setPerspective] = React.useState(500)
@@ -112,7 +111,6 @@ const Screen1 = () => {
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#bae6fd" fillOpacity="1" d="M0,64L80,96C160,128,320,192,480,197.3C640,203,800,149,960,128C1120,107,1280,117,1360,122.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
-            <AllScreens />
         </div >
     )
 }

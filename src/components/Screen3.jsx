@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { motion } from "framer-motion"
-import AllScreens from "./AllScreens";
 
 const NextArrow = ({ onClick }) => {
     return (
@@ -138,17 +137,17 @@ const ImageSlider = ({ slidesToShow = 3 }) => {
         }
     });
 
-    return <div className="md:h-screen m-auto relative overflow-hidden">
+    return <div className="h-screen m-auto relative overflow-hidden -mb-20">
         <div className="flex py-5 items-center text-center justify-center mx-auto gap-4">
             {/* <img src='/kavy1idth="100" height="100" /> */}
             <h1 className="text-light text-4xl py-5">Projects</h1>
         </div>
         <br />
-        <Slider {...settings} className="m-auto h-screen items-center justify-center flex">
+        <Slider {...settings} className="m-auto items-center justify-center flex">
             <div
                 className={0 === imageIndex ? "transition h-full transform duration-300 scale-100 opacity-100 m-auto items-center justify-center" : "transition m-auto transform duration-300 scale-75 opacity-70"}
             >
-                <div className="max-w-xl m-auto bg-blue-200 float-center rounded-lg shadow-md">
+                <div className="max-w-lg m-auto bg-blue-200 float-center rounded-lg shadow-md">
                     <motion.img
                         src='images/babu-1.png'
                         width="100%"
@@ -245,7 +244,6 @@ const ImageSlider = ({ slidesToShow = 3 }) => {
                 </div>
             </div>
         </Slider>
-        <AllScreens />
     </div >
 };
 

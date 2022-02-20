@@ -1,5 +1,7 @@
 import React from 'react'
 import { motion, useMotionValue, useTransform } from "framer-motion"
+// import EmailSvg from "../svg/email.svg"
+
 const Screen1 = () => {
     const [angle, setAngle] = React.useState(8)
     const [perspective, setPerspective] = React.useState(500)
@@ -36,7 +38,6 @@ const Screen1 = () => {
     return (
         <div className="h-screen relative overflow-hidden">
             <motion.h1
-
                 className="px-6 text-5xl py-6 font-elite ">{'<'} Kavya Murali {'/>'}</motion.h1>
             <br />
             <div className='max-w-5xl flex font-recursive items-center h-auto lg:h-auto flex-wrap mx-auto lg:my-0'>
@@ -49,7 +50,7 @@ const Screen1 = () => {
                     />
                 </div>
                 <div className='lg:w-3/5 p-5'>
-                    <h3 className='text-3xl'>Hey there! I am a</h3>
+                    <h3 className='text-3xl'>Hey there ! 👋 I am a</h3>
                     <h1 className="text-5xl font-dancing">Full Stack Developer</h1>
                     <h1 className="text-5xl pb-12"> Freelancer</h1>
                     <div className="py-6">
@@ -62,6 +63,15 @@ const Screen1 = () => {
 
                     </div>
                     <div className="p-6 flex gap-6">
+                        <div className="flex items-center w-10 h-10">
+                            <a href="mailto:kavyamuralioff@gmail.com?body=Hello" target="blank">
+                                <svg className="w-10 h-10 text-sky-100 fill-current"
+                                    viewBox="0 0 412 253" xmlns="http://www.w3.org/2000/svg">
+                                    <path id="XMLID_350_" d="M173.871,177.097c-2.641,1.936-5.756,2.903-8.87,2.903c-3.116,0-6.23-0.967-8.871-2.903L30,84.602
+		L0.001,62.603L0,275.001c0.001,8.284,6.716,15,15,15L315.001,290c8.285,0,15-6.716,15-14.999V62.602l-30.001,22L173.871,177.097z"
+                                    /><polygon id="XMLID_351_" points="165.001,146.4 310.087,40.001 19.911,40 	" /><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            </a>
+                        </div>
                         <div className="flex items-center w-10 h-10">
                             <a href="https://www.linkedin.com/in/kavya2019" target="blank" >
                                 <svg

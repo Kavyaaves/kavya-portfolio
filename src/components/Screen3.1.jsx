@@ -32,7 +32,7 @@ const Screen3 = () => {
                 <br />
                 <Slider {...settings} className='max-w-5xl flex gap-5 m-auto'>
 
-                    <div className="max-w-md bg-blue-200 float-center rounded-lg  shadow-md">
+                    <div className="max-w-lg bg-blue-200 float-center rounded-lg  shadow-md">
                         <motion.img
                             src='images/babu-1.png'
                             width="100%"
@@ -57,7 +57,7 @@ const Screen3 = () => {
 
                         </div>
                     </div>
-                    <div class="max-w-md h-full bg-blue-200 float-center rounded-lg">
+                    <div class="max-w-lg h-full bg-blue-200 float-center rounded-lg">
                         <img
                             src='images/covid-traker-1.png'
                             className="rounded-t-lg "

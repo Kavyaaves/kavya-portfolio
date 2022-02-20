@@ -137,7 +137,7 @@ const ImageSlider = ({ slidesToShow = 3 }) => {
         }
     });
 
-    return <div className="h-screen m-auto relative overflow-hidden -mb-20">
+    return <div className="h-screen m-auto relative overflow-hidden">
         <div className="flex py-5 items-center text-center justify-center mx-auto gap-4">
             {/* <img src='/kavy1idth="100" height="100" /> */}
             <h1 className="text-light text-4xl py-5">Projects</h1>
@@ -238,6 +238,29 @@ const ImageSlider = ({ slidesToShow = 3 }) => {
                         <div className="flex bg-medium flex-wrap gap-x-4 items-center justify-center">
                             <img src="/tools/react.svg" className="w-8 h-10" alt="ReactJS" />
                             <img src="/tools/redux.svg" className="w-20 h-8" alt="Redux" />
+                            <img src="/tools/yarn.svg" className="w-10 h-8" alt="Yarn" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                className={4 === imageIndex ? "transition h-full transform duration-300 scale-100 opacity-100  m-auto items-center justify-center" : "transition transform duration-300 scale-75 opacity-70"}
+            >
+                <div class="max-w-lg h-full bg-blue-200 float-center rounded-lg">
+                    <img
+                        src='images/todo-2.png'
+                        className="rounded-t-lg "
+                        width="100%"
+                        height="100%"
+                    />
+                    <div className="p-5 ">
+                        <h5 className="mb-2 text-xl font-bold tracking-tight text-blue-900 ">TO-DO List</h5>
+                        <h5 className="text-gray-700 text-sm">A simple to-do website to get started with React.</h5>
+                        <br />
+
+                        <div className="flex bg-medium flex-wrap gap-x-4 items-center justify-center">
+                            <img src="/tools/react.svg" className="w-10 h-10" alt="ReactJS" />
+                            <img src="/tools/font-awesome.svg" className="w-20 h-8" alt="Font Awesome" />
                             <img src="/tools/yarn.svg" className="w-10 h-8" alt="Yarn" />
                         </div>
                     </div>

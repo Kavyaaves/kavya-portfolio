@@ -43,7 +43,7 @@ const AllScreens = () => {
                             transition={{ duration: 0.3 }}
                         >
 
-                            <HomeSvg fill={hover == "home" ? "#0c4a6e" : "#bae6fd"} />
+                            <HomeSvg fill={hover == "home" ? "#1f2937" : "#bae6fd"} />
                         </motion.div>
                         <motion.h1
                             layout
@@ -61,7 +61,7 @@ const AllScreens = () => {
                             transition={{ duration: 0.3 }}
                         >
 
-                            <WorkSvg fill={hover == "work" ? "#0c4a6e" : "#bae6fd"} />
+                            <WorkSvg fill={hover == "work" ? "#1f2937" : "#bae6fd"} />
                         </motion.div>
                         <motion.h1
                             layout
@@ -73,20 +73,20 @@ const AllScreens = () => {
                             layout
                             transition={{ duration: 0.3 }}
                         >
-                            <ProjectSvg fill={hover == "project" ? "#0c4a6e" : "#bae6fd"} />
+                            <ProjectSvg fill={hover == "project" ? "#1f2937" : "#bae6fd"} />
                         </motion.div>
                         <motion.h1
                             layout
                             transition={{ duration: 0.3 }}
                             className={hover == "project" ? "text-dark mx-2" : "mx-2"}>{hover == "project" && "Projects"}</motion.h1>
                     </motion.div>
-                    <motion.div whileHover="hover" className={hover == "contact" ? "flex text-center items-center rounded-full p-2 px-3 bg-blue-200" : "flex p-2 text-center items-center"} onHoverStart={e => setHover("contact")} onHoverEnd={e => setHover("")}>
+                    <motion.div whileHover="hover" onClick={() => scrollTo(sec4)} className={hover == "contact" ? "flex text-center items-center rounded-full p-2 px-3 bg-blue-200" : "flex p-2 text-center items-center"} onHoverStart={e => setHover("contact")} onHoverEnd={e => setHover("")}>
                         <motion.div className="items-center justify-center"
                             layout
                             transition={{ duration: 0.3 }}
                         >
 
-                            <ContactSvg fill={hover == "contact" ? "#0c4a6e" : "#bae6fd"} />
+                            <ContactSvg fill={hover == "contact" ? "#1f2937" : "#bae6fd"} />
                         </motion.div>
                         <motion.h1
                             layout

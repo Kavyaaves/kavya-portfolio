@@ -3,6 +3,6 @@
 @tailwind utilities;
 @layer base {
 	body {
-		@apply bg-[#0c4a6e] text-[#bae6fd] font-bold;
+		@apply bg-[#1f2937] text-[#bae6fd] font-bold;
 	}
 }

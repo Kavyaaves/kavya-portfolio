@@ -24,6 +24,7 @@ const AllScreens = () => {
     return (
         <div>
             <div ref={sec1}>
+
                 <Screen1 />
             </div>
             <div ref={sec2}>

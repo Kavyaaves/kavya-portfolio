@@ -1,8 +1,9 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 
 const Screen2 = () => {
     return (
-        <div className="md:h-screen relative border-custom">
+        <motion.div className="md:h-screen relative border-custom" >
             <div className="">
                 <div className='max-w-5xl h-100 flex items-center h-auto lg:h-auto flex-wrap mx-auto lg:my-0 pb-4'>
                     <div className="flex pt-4 items-center text-center justify-center mx-auto gap-4">
@@ -28,8 +29,7 @@ const Screen2 = () => {
                             </div>
                         </li>
                         <li className="mb-10 ml-4">
-                            <span className="flex absolute mt-12 left-3 text-dark  font-extrabold text-xl justify-center items-center w-2 h-2 bg-blue-200 rounded-full ring-8 ring-dark ring-opacity-100 ">
-                                {/* <img className="rounded-full shadow-lg" src="/kavy1.jpg" alt="" /> */}
+                            <span className="flex absolute mt-12 left-3   font-extrabold text-xl justify-center items-center w-2 h-2 bg-gray-200 rounded-full ring-8 ring-light ring-opacity-100 ">
                             </span>
                             <div className="items-center p-4 text-dark rounded-lg bg-light border-2 border-sky-700 shadow-sm ">
                                 <span className="text-lg text-dark ">Front End Developer Intern</span>
@@ -60,7 +60,7 @@ const Screen2 = () => {
                     </ol>
                 </div>
             </div>
-        </div >
+        </motion.div >
     )
 }
 

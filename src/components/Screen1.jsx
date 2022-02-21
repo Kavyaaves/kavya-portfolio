@@ -35,23 +35,34 @@ const Screen1 = () => {
         x.set(0.5, true)
         y.set(0.5, true)
     }
-    return (
-        <div className="h-screen relative overflow-hidden">
+
+    //     exit = {{ height: 0 }
+    // }
+    // animate = {{ height: '100vh' }}
+    // transition = {{ type: 'spring', duration: 2, delay: 0.5 }}
+    return (<div className="h-screen relative overflow-hidden" >
+
+        <motion.div style={{ height: "70vh" }}>
             <motion.h1
                 className="px-6 text-5xl py-6 font-elite ">{'<'} Kavya Murali {'/>'}</motion.h1>
             <br />
-            <div className='max-w-5xl flex font-recursive items-center h-auto lg:h-auto flex-wrap mx-auto lg:my-0'>
+            <motion.div className='max-w-5xl flex font-recursive items-center h-auto lg:h-auto flex-wrap mx-auto lg:my-0'
+                initial={{ y: 600 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                    duration: 0.5, type: "spring", stiffness: 50
+                }}
+            >
                 <div className='block  lg:hidden rounded-full shadow-xl mx-auto  h-48 w-48'>
                     <motion.img
-
                         src='images/kavy1.jpg'
                         alt="Kavya Murali"
                         className='rounded-full  shadow-2xl  block overflow-hidden'
                     />
                 </div>
-                <div className='lg:w-3/5 p-5'>
-                    <h3 className='text-3xl'>Hey there ! 👋 I am a</h3>
-                    <h1 className="text-5xl font-dancing">Full Stack Developer</h1>
+                <motion.div className='lg:w-3/5 p-5'>
+                    <motion.h3 className='text-3xl'>Hey there ! <motion.span>👋</motion.span> I am a</motion.h3>
+                    <motion.h1 className="text-5xl font-dancing" transition={{ type: "spring", damping: 25, stiffness: 500, duration: 1 }}>Full Stack Developer</motion.h1>
                     <h1 className="text-5xl pb-12"> Freelancer</h1>
                     <div className="py-6">
 
@@ -90,7 +101,7 @@ const Screen1 = () => {
                             </a>
                         </div>
                     </div>
-                </div>
+                </motion.div>
                 <motion.div className='lg:w-2/5 flex items-center justify-center h-400'
                     style={{
                         perspective: 500,
@@ -117,11 +128,12 @@ const Screen1 = () => {
                         />
                     </motion.div>
                 </motion.div>
-            </div >
+            </motion.div >
+        </motion.div >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#bae6fd" fillOpacity="1" d="M0,64L80,96C160,128,320,192,480,197.3C640,203,800,149,960,128C1120,107,1280,117,1360,122.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#bae6fd" fillOpacity="1" d="M0,64L80,96C160,128,320,192,480,197.3C640,203,800,149,960,128C1120,107,1280,117,1360,122.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
-        </div >
+    </div>
     )
 }
 

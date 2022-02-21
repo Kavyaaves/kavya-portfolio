@@ -33,7 +33,6 @@ const Footer = () => {
 
   return (
     <div className="h-screen relative">
-
       {!isFormSubmitted ? (
         <form className="px-8 py-12 -mt-20">
           <div className="text-center w-full">
@@ -44,9 +43,9 @@ const Footer = () => {
               <div>
                 <h2 className="text-3xl text-light lg:text-4xl font-bold leading-tight">Let's get started! 🚀</h2>
                 <div className="mt-2 text-light">
-                  or send an email at
+                  or send an email to
                   <br />
-                  kavyaaves2019@gmail.com
+                  kavyamuralioff@gmail.com
                 </div>
               </div>
               <div className="mt-8 text-center">

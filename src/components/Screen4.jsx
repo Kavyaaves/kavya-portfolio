@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import { client } from "../client"
+import Globe from "./Globe"
 const Footer = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
@@ -23,62 +24,66 @@ const Footer = () => {
       message: formData.message,
     };
 
-    // client.create(contact)
-    //   .then(() => {
-    //     setLoading(false);
-    //     setIsFormSubmitted(true);
-    //   })
-    //   .catch((err) => console.log(err));
+    client.create(contact)
+      .then(() => {
+        setLoading(false);
+        setIsFormSubmitted(true);
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
     <div className="h-screen relative">
-      {!isFormSubmitted ? (
-        <form className="px-8 py-12 -mt-20">
-          <div className="text-center w-full">
+      <form className="px-8 -mb-20">
+        <div className="text-center w-full">
+        </div>
+        <div
+          className="max-w-screen-xl  border-striped text-center md:text-left mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-transparent text-dark font-bold rounded-lg shadow-lg">
+          <div className="flex flex-col justify-between">
+            <div>
+              <h2 className="text-3xl text-light lg:text-4xl font-bold leading-tight">Let's get started! 🚀</h2>
+              {/* <div className="mt-2 text-light">
+                or drop an email at
+                <br />
+                kavyamuralioff@gmail.com
+              </div> */}
+            </div>
+            <div className="mt-8 text-center">
+              <Globe />
+            </div>
           </div>
-          <div
-            className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-transparent border-2 border-white text-dark font-bold rounded-lg shadow-lg">
-            <div className="flex flex-col justify-between">
-              <div>
-                <h2 className="text-3xl text-light lg:text-4xl font-bold leading-tight">Let's get started! 🚀</h2>
-                <div className="mt-2 text-light">
-                  or send an email to
-                  <br />
-                  kavyamuralioff@gmail.com
+          <div className="h-max">
+            {!isFormSubmitted ? (
+              <div className="min-h-xl">
+                <div>
+                  <span className="uppercase text-sm text-light font-bold">Name</span>
+                  <input className="w-full border-2  border-white bg-transparent text-light font-bold mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" name="username" placeholder="Name" value={username} onChange={handleChangeInput} />
+                </div>
+                <div className="mt-8">
+                  <span className="uppercase text-sm text-light font-bold">Email</span>
+                  <input className="w-full bg-transparent border-2 border-white text-light font-bold mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                    name="email" type="email" value={email} placeholder="Email" onChange={handleChangeInput} />
+                </div>
+                <div className="mt-8">
+                  <span className="uppercase text-sm text-light font-bold">Message</span>
+                  <textarea placeholder="Message"
+                    value={message}
+                    name="message"
+                    onChange={handleChangeInput}
+                    className="w-full h-32 bg-transparent border-2 border-white text-light font-bold mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+                <div className="mt-8">
+                  <button
+                    onClick={handleSubmit}
+                    className="uppercase text-sm font-bold tracking-wide hover:opacity-90 opacity-100 bg-light hover: text-dark p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+                    {!loading ? 'Send' : 'Sending...'}
+                  </button>
                 </div>
               </div>
-              <div className="mt-8 text-center">
-              </div>
-            </div>
-            <div className="">
-              <div>
-                <span className="uppercase text-sm text-light font-bold">Name</span>
-                <input className="w-full bg-gray-200 text-dark font-bold mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" name="username" placeholder="Name" value={username} onChange={handleChangeInput} />
-              </div>
-              <div className="mt-8">
-                <span className="uppercase text-sm text-light font-bold">Email</span>
-                <input className="w-full bg-gray-200 text-dark font-bold mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                  name="email" type="email" value={email} placeholder="Email" onChange={handleChangeInput} />
-              </div>
-              <div className="mt-8">
-                <span className="uppercase text-sm text-light font-bold">Message</span>
-                <textarea placeholder="Message"
-                  value={message}
-                  name="message"
-                  onChange={handleChangeInput}
-                  className="w-full h-32 bg-gray-200 text-dark font-bold mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
-              </div>
-              <div className="mt-8">
-                <button
-                  onClick={handleSubmit}
-                  className="uppercase text-sm font-bold tracking-wide bg-gray-200 text-dark p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
-                  {!loading ? 'Send' : 'Sending...'}
-                </button>
-              </div>
-            </div>
+            ) : <h2 className="text-light text-3xl items-center">Thanks for getting back to me !!</h2>}
           </div>
-        </form>) : <h2>Thanks for getting back to me !!</h2>}
+        </div>
+      </form>
     </div>
   );
 };

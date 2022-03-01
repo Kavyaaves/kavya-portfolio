@@ -44,30 +44,30 @@ const Screen1 = () => {
 
         <motion.div style={{ height: "70vh" }}>
             <motion.h1
-                className="px-6 text-5xl py-6 font-elite ">{'<'} Kavya Murali {'/>'}</motion.h1>
+                className="px-6 text-4xl md:text-5xl py-3 md:py-6 font-elite ">{'<'} Kavya Murali {'/>'}</motion.h1>
             <br />
             <motion.div className='max-w-5xl flex font-recursive items-center h-auto lg:h-auto flex-wrap mx-auto lg:my-0'
-                initial={{ y: 600 }}
+                initial={{ y: 150 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{
                     duration: 0.5, type: "spring", stiffness: 50
                 }}
             >
-                <div className='block  lg:hidden rounded-full shadow-xl mx-auto  h-48 w-48'>
+                <div className='block lg:hidden rounded-full shadow-xl mx-auto  h-48 w-48'>
                     <motion.img
-                        src='images/kavy1.jpg'
+                        src='images/kavya-2.jpg'
                         alt="Kavya Murali"
                         className='rounded-full  shadow-2xl  block overflow-hidden'
                     />
                 </div>
-                <motion.div className='lg:w-3/5 p-5'>
-                    <motion.h3 className='text-3xl'>Hey there ! <motion.span>👋</motion.span> I am a</motion.h3>
-                    <motion.h1 className="text-5xl font-dancing" transition={{ type: "spring", damping: 25, stiffness: 500, duration: 1 }}>Full Stack Developer</motion.h1>
-                    <h1 className="text-5xl pb-12"> Freelancer</h1>
-                    <div className="py-6">
+                <motion.div className='lg:w-3/5 p-5 m-auto'>
+                    <motion.h3 className='text-2xl md:text-3xl'>Hey there ! <motion.span>👋</motion.span> I am a</motion.h3>
+                    <motion.h1 className="text-3xl md:text-5xl font-dancing" transition={{ type: "spring", damping: 25, stiffness: 500, duration: 1 }}>Full Stack Developer</motion.h1>
+                    <h1 className="text-3xl md:text-5xl pb-6 md:pb-12"> Freelancer</h1>
+                    <div className="py-6 ">
 
                         <a href="/images/Kavya's Resume.pdf" target="_blank">
-                            <span className="border-solid border-2 w-100 rounded-lg text-xl p-3 cursor-pointer">
+                            <span className="border-solid border-2 w-full hover:bg-blue-100 hover:text-gray-700 shadow-lg rounded-lg text-lg md:text-xl p-2 md:p-3 cursor-pointer">
                                 Get my Resume
                             </span>
                         </a>
@@ -75,7 +75,7 @@ const Screen1 = () => {
                     </div>
                     <div className="p-6 flex gap-6">
                         <div className="flex items-center w-10 h-10">
-                            <a href="mailto:kavyamuralioff@gmail.com?body=Hello" target="blank">
+                            <a href="mailto:kavyamuralioff@gmail.com" target="blank">
                                 <svg className="w-10 h-10 text-sky-100 fill-current"
                                     viewBox="0 0 412 253" xmlns="http://www.w3.org/2000/svg">
                                     <path id="XMLID_350_" d="M173.871,177.097c-2.641,1.936-5.756,2.903-8.87,2.903c-3.116,0-6.23-0.967-8.871-2.903L30,84.602
@@ -130,10 +130,9 @@ const Screen1 = () => {
                 </motion.div>
             </motion.div >
         </motion.div >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="hidden lg:grid">
             <path fill="#bae6fd" fillOpacity="1" d="M0,64L80,96C160,128,320,192,480,197.3C640,203,800,149,960,128C1120,107,1280,117,1360,122.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
-
-    </div>
+    </div >
     )
 }
 

@@ -32,3 +32,24 @@ html {
 .font-elite {
 	font-family: 'Special Elite', cursive;
 }
+
+.border-striped {
+	background-color: transparent;
+	/* display: inline-flex; */
+	border: 15px solid #bae6fd;
+	border-image: repeating-linear-gradient(
+			130deg,
+			#bae6fd,
+			#bae6fd 20px,
+			transparent 20px,
+			transparent 40px
+		)
+		20;
+}
+
+.neon {
+	animation: glow 1s ease-in-out infinite alternate;
+
+	text-shadow: 0 0 10px #bae6fd, 0 0 20px #bae6fd, 0 0 30px #bae6fd,
+		0 0 40px #bae6fd, 0 0 50px #bae6fd, 0 0 60px #bae6fd, 0 0 60px #bae6fd;
+}

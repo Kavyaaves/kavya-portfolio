@@ -11,11 +11,10 @@ const Screen2 = () => {
                         <h1 className="text-light  md:text-md text-3xl">Work Experience</h1>
                     </div>
                     <motion.ol className="relative  px-10 pb-0 pt-10 overflow-hidden">
-                        <motion.li className="pb-10 pl-4 align-center " whileInView={{ opacity: 1 }}
-                            initial={{ opacity: 0 }}
+                        <motion.li className="pb-10 pl-4 align-center " whileInView={{ scale: 1 }}
+                            initial={{ scale: 0.3 }}
                             transition={{
-                                duration: 0.25,
-                                delay: 0.1
+                                duration: 0.5,
                             }}>
                             {/* <span className="flex absolute left-3 justify-center mt-12 items-center w-2 h-2 bg-blue-100 ring-opacity-70 rounded-full ring-8 ring-blue-200 opacity-100">
                             </span> */}
@@ -30,11 +29,10 @@ const Screen2 = () => {
 
                             </div>
                         </motion.li>
-                        <motion.li whileInView={{ opacity: 1 }}
-                            initial={{ opacity: 0 }}
+                        <motion.li whileInView={{ scale: 1 }}
+                            initial={{ scale: 0.3 }}
                             transition={{
-                                duration: 0.25,
-                                delay: 0.1
+                                duration: 0.5,
                             }} className="mb-10 ml-4">
 
                             <div className="items-center p-4 text-dark rounded-lg bg-light border-2 border-sky-700 shadow-sm ">
@@ -48,11 +46,10 @@ const Screen2 = () => {
 
                             </div>
                         </motion.li>
-                        <motion.li className="ml-4" whileInView={{ opacity: 1 }}
-                            initial={{ opacity: 0 }}
+                        <motion.li className="ml-4" whileInView={{ scale: 1 }}
+                            initial={{ scale: 0.3 }}
                             transition={{
-                                duration: 0.25,
-                                delay: 0.1
+                                duration: 0.5,
                             }}>
 
                             <div className="items-center p-4 text-dark rounded-lg bg-light  border-2 border-sky-700 shadow-sm ">

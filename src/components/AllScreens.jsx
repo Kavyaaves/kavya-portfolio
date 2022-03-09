@@ -22,9 +22,8 @@ const AllScreens = () => {
         });
     };
     return (
-        <div>
+        <div className="">
             <div ref={sec1}>
-
                 <Screen1 />
             </div>
             <div ref={sec2}>
@@ -36,14 +35,13 @@ const AllScreens = () => {
             <div ref={sec4}>
                 <Screen4 />
             </div>
-            <motion.div animate className="sticky bg-dark backdrop-opacity-10 cursor-pointer max-w-md flex gap-5 items-center justify-center bottom-5 md:p-3 p-1 m-auto  border-2 rounded-full bg-opacity-60 backdrop-filter backdrop-blur-sm">
+            <motion.div animate className="sticky bg-dark backdrop-opacity-10 cursor-pointer max-w-md flex gap-5 items-center justify-center bottom-5 md:p-3 p-1 m-auto border-2 rounded-full bg-opacity-60 backdrop-filter backdrop-blur-sm">
                 <AnimateSharedLayout>
                     <motion.div onClick={() => scrollTo(sec1)} whileHover="hover" className={hover == "home" ? "flex text-center items-center rounded-full p-2 px-3 bg-blue-200" : "flex p-2 text-center items-center"} onHoverStart={e => setHover("home")} onHoverEnd={e => setHover("")}>
                         <motion.div className="items-center justify-center"
                             layout
                             transition={{ duration: 0.3 }}
                         >
-
                             <HomeSvg fill={hover == "home" ? "#1f2937" : "#bae6fd"} />
                         </motion.div>
                         <motion.h1
@@ -53,10 +51,6 @@ const AllScreens = () => {
                         </motion.h1>
                     </motion.div>
                     <motion.div onClick={() => scrollTo(sec2)} whileHover="hover" className={hover == "work" ? "flex text-center items-center rounded-full p-2 px-3 bg-blue-200" : "flex p-2 text-center items-center"} onHoverStart={e => setHover("work")} onHoverEnd={e => setHover("")}>
-                        {/* <motion.img
-                            className="fill-svg"
-                            layout
-                            src="/work1.svg" alt="Work" className="w-7 h-7" /> */}
                         <motion.div className="items-center justify-center"
                             layout
                             transition={{ duration: 0.3 }}
@@ -96,6 +90,7 @@ const AllScreens = () => {
                     </motion.div>
                 </AnimateSharedLayout>
             </motion.div >
+            <div className="-my-20"></div>
         </div >
     )
 }

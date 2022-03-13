@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { client } from "../client"
 import { motion } from "framer-motion"
+import Smoke from './Smoke';
 const Footer = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
@@ -40,7 +41,7 @@ const Footer = () => {
   };
 
   return (
-    <div className=" relative">
+    <div className="min-h-screen relative">
       <div className="py-5"></div>
       <div className="md:mx-10 mx-5" m-5>
         <div
@@ -49,7 +50,7 @@ const Footer = () => {
             <h2 className="text-3xl text-light lg:text-4xl px-5 md:px-10 text-center font-bold leading-tight">Get In Touch ! 🚀</h2>
           </div>
           <div className="flex items-center justify-center px-5 md:px-40" >
-            {isFormSubmitted ? (
+            {!isFormSubmitted ? (
               <div className="w-full text-start">
                 <div>
                   <p className="uppercase text-sm text-light text-left font-bold">Name</p>
@@ -85,11 +86,18 @@ const Footer = () => {
                 </div>
               </div>
             ) :
-              <motion.div style={{ minHeight: 400 }}>
-                <div className="mt-20"></div>
-                <h2 className="text-light text-3xl font-bold text-center m-auto items-center">Thank you for filling the form!!</h2><br />
-                <h2 className="text-light text-xl font-bold text-center m-auto items-center">Will get back to you soon ✌</h2><br />
-              </motion.div>
+              <div>
+                <motion.div style={{ minHeight: 400 }}>
+                  <div className="absolute z-40">
+                    <Smoke />
+                  </div>
+                  <div className="relative z-50">
+                    <div className="mt-20"></div>
+                    <h2 className="text-light text-3xl font-bold text-center m-auto items-center">Thank you for filling the form!!</h2><br />
+                    <h2 className="text-light text-xl font-bold text-center m-auto items-center">Will get back to you soon ✌</h2><br />
+                  </div>
+                </motion.div>
+              </div>
             }
           </div>
         </div>

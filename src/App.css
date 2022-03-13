@@ -87,3 +87,31 @@ html {
 .flip-container:hover .hover-content {
 	opacity: 1;
 }
+
+.intro-carousel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.intro-carousel > img {
+	display: none;
+}
+.flickity-viewport {
+	height: 100% !important;
+}
+
+.intro-cell {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.intro-text {
+	position: absolute;
+	left: 50%;
+	bottom: 5%;
+	transform: translateX(-50%);
+	max-width: 860px;
+}

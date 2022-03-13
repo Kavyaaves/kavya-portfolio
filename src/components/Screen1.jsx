@@ -61,6 +61,7 @@ const Screen1 = () => {
             >
                 <div className='block lg:hidden rounded-full shadow-xl mx-auto  h-48 w-48'>
                     <motion.img
+
                         src='images/kavya-2.jpg'
                         alt="Kavya Murali"
                         className='rounded-t-full rounded-b-lg shadow-2xl  block overflow-hidden'
@@ -111,7 +112,7 @@ const Screen1 = () => {
                         </div>
                     </motion.div>
                 </motion.div>
-                <motion.div className='lg:w-2/5 flex items-center justify-center h-400'
+                <motion.div className='lg:w-2/5 flex items-center justify-center h-400 hidden lg:block'
                     style={{
                         perspective: 500,
                         height: "400px"
@@ -125,7 +126,6 @@ const Screen1 = () => {
                         }}>
 
                         <motion.img
-
                             src='images/kavy1.jpg'
                             alt="Kavya Murali"
                             // layout='fixed'

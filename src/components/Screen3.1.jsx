@@ -22,6 +22,7 @@ const Screen3 = () => {
             }
         }]
     };
+    
     return (
         <div className="md:h-screen relative -mb-20">
             <div className='max-w-6xl h-100  items-center h-auto lg:h-auto flex-wrap mx-auto lg:my-0'>

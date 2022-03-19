@@ -122,7 +122,6 @@ class App extends Component {
 
       if (newSection != currentSection) {
         currentSection = newSection
-
         gsap.to(
           [currentSection].rotation,
           {

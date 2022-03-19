@@ -120,7 +120,7 @@ class App extends Component {
       scrollY = window.scrollY
       const newSection = Math.round(scrollY / sizes.height)
 
-      if (newSection != currentSection) {
+      if (newSection !== currentSection) {
         currentSection = newSection
         gsap.to(
           [currentSection].rotation,

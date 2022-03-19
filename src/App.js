@@ -119,7 +119,6 @@ class App extends Component {
     window.addEventListener('scroll', () => {
       scrollY = window.scrollY
       const newSection = Math.round(scrollY / sizes.height)
-
       if (newSection !== currentSection) {
         currentSection = newSection
         gsap.to(

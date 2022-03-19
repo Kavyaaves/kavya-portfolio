@@ -12,7 +12,7 @@ const Footer = () => {
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    if (errors[name] && value && value != "") {
+    if (errors[name] && value && value !== "") {
       setErrors({ ...errors, [name]: null })
     }
   };
@@ -36,7 +36,7 @@ const Footer = () => {
         })
         .catch((err) => console.log(err));
     } else {
-      setErrors({ name: (!name || name == "") ? "Please provide your name" : null, email: (!email || email == "") ? "Please provide an email address" : null, message: (!message || message == "") ? "Please provide your message" : null });
+      setErrors({ name: (!name || name === "") ? "Please provide your name" : null, email: (!email || email === "") ? "Please provide an email address" : null, message: (!message || message === "") ? "Please provide your message" : null });
     }
   };
 
@@ -55,16 +55,16 @@ const Footer = () => {
                 <div>
                   <p className="uppercase text-sm text-light text-left font-bold">Name</p>
                   <input
-                    className={(errors.name == "" || errors.name == null) ? "w-full border-2 focus:ring-3 border-white bg-transparent text-light font-semibold tracking-wide mt-2 p-2 md:p-3 rounded-lg focus:outline-none focus:shadow-outline" : "w-full focus:ring-3 border-white bg-transparent text-light font-semibold tracking-wide mt-2 p-2 md:p-3 rounded-lg focus:outline-none focus:shadow-outline border-2 border-red-500"}
+                    className={(errors.name === "" || errors.name === null) ? "w-full border-2 focus:ring-3 border-white bg-transparent text-light font-semibold tracking-wide mt-2 p-2 md:p-3 rounded-lg focus:outline-none focus:shadow-outline" : "w-full focus:ring-3 border-white bg-transparent text-light font-semibold tracking-wide mt-2 p-2 md:p-3 rounded-lg focus:outline-none focus:shadow-outline border-2 border-red-500"}
                     type="text" name="name" placeholder="Name" value={name} onChange={handleChangeInput} />
-                  {errors.name != "" && <div className="text-red-600 mt-2">{errors.name}</div>}
+                  {errors.name !== "" && <div className="text-red-600 mt-2">{errors.name}</div>}
                 </div>
                 <div className="mt-6">
                   <p className="uppercase text-sm text-light font-bold text-left">Email</p>
                   <input
-                    className={(errors.email == "" || errors.email == null) ? "w-full border-2 focus:ring-3 border-white bg-transparent text-light font-semibold tracking-wide mt-2 p-2 md:p-3 rounded-lg focus:outline-none focus:shadow-outline" : "w-full focus:ring-3 border-white bg-transparent text-light font-semibold tracking-wide mt-2 p-2 md:p-3 rounded-lg focus:outline-none focus:shadow-outline border-2 border-red-500"}
+                    className={(errors.email === "" || errors.email === null) ? "w-full border-2 focus:ring-3 border-white bg-transparent text-light font-semibold tracking-wide mt-2 p-2 md:p-3 rounded-lg focus:outline-none focus:shadow-outline" : "w-full focus:ring-3 border-white bg-transparent text-light font-semibold tracking-wide mt-2 p-2 md:p-3 rounded-lg focus:outline-none focus:shadow-outline border-2 border-red-500"}
                     name="email" type="email" value={email} placeholder="Email" onChange={handleChangeInput} />
-                  {errors.email != "" && <div className="text-red-600 mt-2">{errors.email}</div>}
+                  {errors.email !== "" && <div className="text-red-600 mt-2">{errors.email}</div>}
                 </div>
                 <div className="mt-8">
                   <p className="uppercase text-sm text-light font-bold text-left">Message</p>
@@ -73,9 +73,9 @@ const Footer = () => {
                     name="message"
                     rows={4}
                     onChange={handleChangeInput}
-                    className={(errors.message == "" || errors.message == null) ? "w-full border-2 focus:ring-3 border-white bg-transparent text-light font-semibold tracking-wide mt-2 p-2 md:p-3 rounded-lg focus:outline-none focus:shadow-outline" : "w-full focus:ring-3 border-white bg-transparent text-light font-semibold tracking-wide mt-2 p-2 md:p-3 rounded-lg focus:outline-none focus:shadow-outline border-2 border-red-500"}
+                    className={(errors.message === "" || errors.message === null) ? "w-full border-2 focus:ring-3 border-white bg-transparent text-light font-semibold tracking-wide mt-2 p-2 md:p-3 rounded-lg focus:outline-none focus:shadow-outline" : "w-full focus:ring-3 border-white bg-transparent text-light font-semibold tracking-wide mt-2 p-2 md:p-3 rounded-lg focus:outline-none focus:shadow-outline border-2 border-red-500"}
                   ></textarea>
-                  {errors.message != "" && <div className="text-red-600 mt-2">{errors.message}</div>}
+                  {errors.message !== "" && <div className="text-red-600 mt-2">{errors.message}</div>}
                 </div>
                 <div className="mt-8">
                   <button

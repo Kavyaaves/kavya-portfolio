@@ -3,8 +3,8 @@ import { motion, useMotionValue, useTransform } from "framer-motion"
 // import EmailSvg from "../svg/email.svg"
 
 const Screen1 = () => {
+    // eslint-disable-next-line no-unused-vars
     const [angle, setAngle] = React.useState(8)
-    const [perspective, setPerspective] = React.useState(500)
 
     // we replace the useState with two motion values. One for each axis.
     // Since we want the card to start out flat we set the initial
@@ -50,7 +50,7 @@ const Screen1 = () => {
 
         <motion.div>
             <motion.h1
-                className="px-6 text-4xl md:text-5xl py-3 md:py-6 font-elite ">{'<'} Kavya Murali {'/>'}</motion.h1>
+                className="px-6 text-4xl md:text-5xl py-3 md:py-6 font-elite ">{'<'} Kavya Murali {'>'}</motion.h1>
             <br />
             <motion.div className='max-w-5xl md:flex font-recursive items-center h-auto lg:h-auto flex-wrap mx-auto lg:my-0'
                 initial={{ y: 150 }}
@@ -112,14 +112,15 @@ const Screen1 = () => {
                         </div>
                     </motion.div>
                 </motion.div>
-                <motion.div className='lg:w-2/5 flex items-center justify-center h-400 hidden lg:block'
+                <motion.div className='lg:w-2/5 items-center justify-center h-400 hidden lg:block'
                     style={{
                         perspective: 500,
                         height: "400px"
                     }}
                 >
-                    <motion.div onMouseMove={onMove}
-                        onMouseLeave={onLeave}
+                    <motion.div onPointerMove={onMove}
+                        // onMLeave={onLeave}
+                        transition={{ duration:1}}
                         style={{
                             rotateY,
                             rotateX,

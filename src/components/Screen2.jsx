@@ -7,7 +7,7 @@ const Screen2 = () => {
             <motion.div className="">
                 <motion.div className='max-w-5xl h-100 flex items-center h-auto lg:h-auto flex-wrap mx-auto lg:my-0 pb-4'>
                     <div className="flex pt-4 items-center text-center justify-center mx-auto gap-4">
-                        <img src="/images/work.svg" width="50" height="50" />
+                        <img src="/images/work.svg" width="50" height="50" alt="Kavya"/>
                         <h1 className="text-light  md:text-md text-3xl">Work Experience</h1>
                     </div>
                     <motion.ol className="relative  px-10 pb-0 pt-10 overflow-hidden">

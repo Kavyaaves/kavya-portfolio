@@ -6,6 +6,9 @@
   "main": "package.json",
   "author": "079 Kavya Murali <kavyaaves2019@gmail.com>",
   "license": "UNLICENSED",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "start": "sanity start",
     "build": "sanity build"

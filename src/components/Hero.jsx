@@ -31,11 +31,6 @@ const Hero = () => {
         x.set(xValue, true)
         y.set(yValue, true)
     }
-    const onLeave = e => {
-        x.set(0.5, true)
-        y.set(0.5, true)
-    }
-
     const buttonVariants = {
         hover: {
             scale: 1.3

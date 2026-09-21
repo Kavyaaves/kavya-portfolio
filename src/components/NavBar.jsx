@@ -11,7 +11,7 @@ const NavBar = () => {
                     <motion.h1
                         layout
                         transition={{ duration: 0.3 }}
-                        className="text-light mx-2">{hover == "home" && "Home"}</motion.h1>
+                        className="text-light mx-2">{hover === "home" && "Home"}</motion.h1>
                 </motion.div>
                 <motion.div whileHover="hover" className="flex text-center items-center" onHoverStart={e => setHover("work")} onHoverEnd={e => setHover("")}>
                     <motion.img
@@ -20,7 +20,7 @@ const NavBar = () => {
                     <motion.h1
                         layout
                         transition={{ duration: 0.3 }}
-                        className="text-light mx-2">{hover == "work" && "Work"}</motion.h1>
+                        className="text-light mx-2">{hover === "work" && "Work"}</motion.h1>
                 </motion.div>
                 <motion.div whileHover="hover" className="flex text-center items-center" onHoverStart={e => setHover("project")} onHoverEnd={e => setHover("")}>
                     <motion.img
@@ -29,7 +29,7 @@ const NavBar = () => {
                     <motion.h1
                         layout
                         transition={{ duration: 0.3 }}
-                        className="text-light mx-2">{hover == "project" && "Projects"}</motion.h1>
+                        className="text-light mx-2">{hover === "project" && "Projects"}</motion.h1>
                 </motion.div>
                 <motion.div whileHover="hover" className="flex text-center items-center" onHoverStart={e => setHover("contact")} onHoverEnd={e => setHover("")}>
                     <motion.img
@@ -38,7 +38,7 @@ const NavBar = () => {
                     <motion.h1
                         layout
                         transition={{ duration: 0.3 }}
-                        className="text-light mx-2">{hover == "contact" && "Contact Me"}</motion.h1>
+                        className="text-light mx-2">{hover === "contact" && "Contact Me"}</motion.h1>
                 </motion.div>
         </motion.div >
     )

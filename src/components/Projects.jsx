@@ -67,7 +67,7 @@ const Projects = ({ slidesToShow = 3 }) => {
                     </div>
                     <div className="p-5 ">
                         <h5 className="mb-2 text-xl font-bold tracking-tight text-dark ">Personal Memory Engine</h5>
-                        <h5 className="text-medium text-sm">A Python/FastAPI/React (Vite) knowledge retrieval system indexing 1,200 documents into a vector database with an end-to-end RAG pipeline, improving retrieval accuracy from 61% to 88%.</h5>
+                        <h5 className="text-medium text-sm">A Python/FastAPI/React (Vite) knowledge retrieval system (RAG) indexing 1,200 documents into a vector database with an end-to-end RAG pipeline, improving retrieval accuracy from 61% to 88%.</h5>
                         <br />
                         <div className="flex flex-wrap gap-x-4 items-center justify-center">
                             <img src="/tools/python.svg" data-tooltip-id="python" className="cursor-pointer w-10 h-10" alt="Python" />
@@ -332,7 +332,7 @@ const Projects = ({ slidesToShow = 3 }) => {
                     </div>
 
                     <div className="p-5 ">
-                        <h5 className="mb-2 text-xl font-bold tracking-tight text-dark ">Client Task Tracker</h5>
+                        <h5 className="mb-2 text-xl font-bold tracking-tight text-dark ">Project Client Task Tracker</h5>
                         <h5 className="text-medium text-sm">Next.js/MongoDB task-management platform with role-based access control, cutting task-list query time from 1.4s to 320ms via compound indexing and aggregation-pipeline restructuring.</h5>
                         <br />
 

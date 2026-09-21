@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {
-  Scene, PerspectiveCamera, MeshToonMaterial, Group,
+  Scene, PerspectiveCamera, Group,
   WebGLRenderer, Clock, BufferGeometry, BufferAttribute, PointsMaterial,
   Points, DirectionalLight
 } from "three";
@@ -23,9 +23,6 @@ class App extends Component {
      * Objects
      */
     const objectsDistance = 4
-
-    // Material
-    const material = new MeshToonMaterial({ color: '#f3f4f6' })
 
     // Meshes
     // const mesh1 = new THREE.Mesh(

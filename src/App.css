@@ -3,20 +3,20 @@
 }
 html {
 	scroll-behavior: smooth;
-	background-color: #1f2937;
+	background-color: #000000;
 }
 
 .text-dark {
-	color: #1f2937;
+	color: #000000;
 }
 .text-light {
-	color: #bae6fd;
+	color: #f5f5f4;
 }
 .bg-dark {
-	background-color: #1f2937;
+	background-color: #000000;
 }
 .bg-light {
-	background-color: #bae6fd;
+	background-color: #f5f5f4;
 }
 .webgl {
 	position: fixed;
@@ -26,7 +26,7 @@ html {
 
 .border-custom {
 	border-width: 20px;
-	border-image: repeating-radial-gradient(circle at 10px, #bae6fd, #bae6fd) 1;
+	border-image: repeating-radial-gradient(circle at 10px, #f5f5f4, #f5f5f4) 1;
 }
 
 .font-elite {
@@ -36,11 +36,11 @@ html {
 .border-striped {
 	background-color: transparent;
 	/* display: inline-flex; */
-	border: 15px solid #bae6fd;
+	border: 15px solid #f5f5f4;
 	border-image: repeating-linear-gradient(
 			130deg,
-			#bae6fd,
-			#bae6fd 20px,
+			#f5f5f4,
+			#f5f5f4 20px,
 			transparent 20px,
 			transparent 40px
 		)
@@ -49,13 +49,13 @@ html {
 
 .neon {
 	animation: glow 1s ease-in-out infinite alternate;
-	text-shadow: 0 0 10px #bae6fd, 0 0 20px #bae6fd, 0 0 30px #bae6fd,
-		0 0 40px #bae6fd, 0 0 50px #bae6fd, 0 0 60px #bae6fd, 0 0 60px #bae6fd;
+	text-shadow: 0 0 10px #f5f5f4, 0 0 20px #f5f5f4, 0 0 30px #f5f5f4,
+		0 0 40px #f5f5f4, 0 0 50px #f5f5f4, 0 0 60px #f5f5f4, 0 0 60px #f5f5f4;
 }
 
 .flip-container {
 	position: relative;
-	background-color: #1f2937;
+	background-color: #000000;
 }
 
 .image {

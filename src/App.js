@@ -25,7 +25,7 @@ class App extends Component {
     const objectsDistance = 4
 
     // Material
-    const material = new MeshToonMaterial({ color: '#ffeded' })
+    const material = new MeshToonMaterial({ color: '#f3f4f6' })
 
     // Meshes
     // const mesh1 = new THREE.Mesh(
@@ -72,7 +72,7 @@ class App extends Component {
     // Material
 
     const particlesMaterial = new PointsMaterial({
-      color: '#cffafe',
+      color: '#e5e7eb',
       sizeAttenuation: true,
       size: 0.05
     })

@@ -1,10 +1,9 @@
 import React from 'react'
-import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion"
+import { motion } from "framer-motion"
 const NavBar = () => {
     const [hover, setHover] = React.useState("")
     return (
-        <motion.div animate className="sticky cursor-pointer flex gap-5 items-center justify-center bottom-5 w-1/3 m-auto bg-[#bae6fd] border-2 border-blue-500 p-5 rounded-xl bg-opacity-60 backdrop-filter backdrop-blur-sm">
-            <AnimateSharedLayout>
+        <motion.div animate className="sticky cursor-pointer flex gap-5 items-center justify-center bottom-5 w-1/3 m-auto bg-[#f5f5f4] border-2 border-dark p-5 rounded-xl bg-opacity-60 backdrop-filter backdrop-blur-sm">
                 <motion.div whileHover="hover" className="flex text-center items-center" onHoverStart={e => setHover("home")} onHoverEnd={e => setHover("")}>
                     <motion.img
                         layout
@@ -41,7 +40,6 @@ const NavBar = () => {
                         transition={{ duration: 0.3 }}
                         className="text-light mx-2">{hover == "contact" && "Contact Me"}</motion.h1>
                 </motion.div>
-            </AnimateSharedLayout>
         </motion.div >
     )
 }

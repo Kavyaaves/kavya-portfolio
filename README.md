@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# Kavya Murali — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My personal portfolio website: an interactive, single-page site built with
+React and Three.js, showcasing my work experience, projects, and a contact
+form backed by Sanity.
 
-## Available Scripts
+Live: https://kavya-portfolio.vercel.app/
 
-In the project directory, you can run:
+## About the project
 
-### `npm start`
+The site is a single scrolling page (`src/components/AllScreens.jsx`) made up
+of four sections:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Hero** ([src/components/Hero.jsx](src/components/Hero.jsx)) — intro, resume link, and social links.
+- **Work Experience** ([src/components/WorkExperience.jsx](src/components/WorkExperience.jsx)) — a timeline of past roles.
+- **Projects** ([src/components/Projects.jsx](src/components/Projects.jsx)) — a carousel of projects with tech-stack tags.
+- **Contact** ([src/components/Contact.jsx](src/components/Contact.jsx)) — a contact form that saves submissions to Sanity.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A parallax star-field scene rendered with Three.js sits behind the whole page
+(`src/App.js`), and a floating pill navigation bar lets you jump between
+sections.
 
-### `npm test`
+## Tech stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Frontend framework & tooling**
+- [React](https://react.dev/) `19.3.0` + `react-dom` `19.3.0`
+- [react-scripts](https://create-react-app.dev/) (Create React App) `5.0.1`
+- [Tailwind CSS](https://tailwindcss.com/) `3.4.19`, [PostCSS](https://postcss.org/) `8.5.28`, [Autoprefixer](https://github.com/postcss/autoprefixer) `10.4.21`
 
-### `npm run build`
+**3D, animation & UI**
+- [Three.js](https://threejs.org/) `0.186.0` — background particle/parallax scene
+- [Framer Motion](https://www.framer.com/motion/) `13.4.0` — animations and transitions
+- [GSAP](https://gsap.com/) `3.15.0` — scroll-driven animations
+- [react-slick](https://react-slick.neostack.com/) `0.31.0` — the projects carousel
+- [react-tooltip](https://react-tooltip.com/) `6.0.8` — tech-stack tag tooltips
+- [react-globe.gl](https://github.com/vasturiano/react-globe.gl) `2.38.0` (unused, present as a dependency)
+- [react-intersection-observer](https://github.com/thebuilder/react-intersection-observer) `11.0.1` (unused, present as a dependency)
+- [react-router-dom](https://reactrouter.com/) `7.18.4` (unused, present as a dependency)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Content / backend**
+- [@sanity/client](https://www.sanity.io/docs/js-client) `8.6.2` — used by the contact form to save messages
+- [Sanity Studio](https://www.sanity.io/) (see [backend/](backend)) — separate CMS project, its own dependencies are listed below
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Testing**
+- [Jest](https://jestjs.io/) (via `react-scripts test`)
+- [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro/) `16.3.3`
+- [@testing-library/jest-dom](https://github.com/testing-library/jest-dom) `7.0.1`
+- [@testing-library/user-event](https://testing-library.com/docs/user-event/intro/) `14.6.7`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Metrics**
+- [web-vitals](https://github.com/GoogleChrome/web-vitals) `6.2.2`
 
-### `npm run eject`
+### Backend (`backend/`) — Sanity Studio v2
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `@sanity/base` `2.27.1`, `@sanity/core` `2.27.0`, `@sanity/desk-tool` `2.27.1`,
+  `@sanity/default-layout` `2.27.1`, `@sanity/default-login` `2.27.0`,
+  `@sanity/vision` `2.27.1`, `@sanity/eslint-config-studio` `2.0.0`
+- `react` `17.0`, `react-dom` `17.0`, `styled-components` `5.2.0`, `prop-types` `15.7`
+- `eslint` `8.6.0`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Prerequisites
+- Node.js 18+ and npm
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Setup
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Create a `.env` file in the project root with your Sanity project credentials
+(used by the contact form to save messages):
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+REACT_APP_SANITY_PROJECT_ID=your_sanity_project_id
+REACT_APP_SANITY_TOKEN=your_sanity_write_token
+```
 
-### Code Splitting
+### Run the dev server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+Opens the app at [http://localhost:3000](http://localhost:3000) with hot reload.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Run tests
 
-### Making a Progressive Web App
+```bash
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Build for production
 
-### Advanced Configuration
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Outputs an optimized production build to the `build/` folder.
 
-### Deployment
+## Sanity Studio (backend)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The `backend/` folder contains a separate Sanity Studio project used to manage
+the `contact` schema. See [backend/README.md](backend/README.md) for setup.

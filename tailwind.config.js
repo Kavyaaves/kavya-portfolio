@@ -1,27 +1,26 @@
 module.exports = {
-    mode: 'jit',
-    purge: [
-        './pages/**/*.{js,ts,jsx,tsx}',
-        './components/**/*.{js,ts,jsx,tsx}',
+    content: [
+        './public/index.html',
+        './src/**/*.{js,jsx,ts,tsx}',
     ],
 
     theme: {
         colors: {
-            light: "#bae6fd",
-            medium: "#0891b2",
-            dark: "#0c4a6e",
+            light: "#f5f5f4",
+            medium: "#6b7280",
+            dark: "#000000",
         },
         extend: {
             backgroundColor: (theme) => theme('colors'),
             textColor: (theme) => theme('colors'),
             backgroundImage: (theme) => ({
-                kavya: "url('/images/kavy1.jpg')",
+                kavya: "url('/images/kavya.jpeg')",
             }),
         },
         fontFamily: {
             'sans': ['ui-sans-serif', 'system-ui'],
             'serif': ['ui-serif', 'Georgia'],
-            'mono': ['ui-monospace', 'SFMono-Regular'],
+            'mono': ['Fira Code', 'ui-monospace', 'SFMono-Regular'],
             'display': ['Oswald'],
             'body': ['"Open Sans"'],
             'dancing': ['Dancing Script'],
@@ -36,10 +35,6 @@ module.exports = {
             // mono: ['ui-monospace', 'SFMono-Regular', 'ui-sans-serif', 'system-ui'],
         },
     },
-    darkMode: false,
-    variants: {
-        extend: {},
-    },
-
+    darkMode: 'media',
     plugins: [],
 };
